@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="mx-auto wrapper py-9">
+    <about />
+    <features />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import "./assets/tailwind.css";
+import About from "./components/about.vue";
+import Features from "./components/features.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    About,
+    Features,
+  },
+};
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Rubik;
+  font-size: 16px;
+  width: 100%;
+}
+h1,
+h2 {
+  color: #0b132a;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  background-color: #fff;
+}
+.wrapper {
+  width: 85%;
+}
+@media screen and (max-width: 520px) {
+  .wrapper {
+    width: 90%;
+  }
 }
 </style>
